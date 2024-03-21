@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <h1 class="d-flex align-item-center">Qancha vaqtda belgilangan yo'lni bosib o'tadi</h1>
+
+    <div class="calculateSection d-flex align-item-center  justify-content-center gap-5 m-5 ">
+        <h3>Masofa kiriting</h2>
+            <input type="number" name="number" class="input w-25 input-group-text p-3" placeholder="100km">
+            <button class="btn btn-primary active">Hisobla</button>
+    </div>
+
+    <div class="cardSection  m-5 d-flex align-item-center  justify-content-center gap-5">
+
+        <div class="card mb-3 border-2">
+            <img src="im/walk-flat-icon-free-vector.jpg" class="img-fluid rounded-start" alt="...">
+            <div class="card-body">
+                <h3 class="card-title d-flex justify-content-center">Piyoda</h3>
+                <p class="card-title d-flex justify-content-center Piyoda"><small class="text-muted">N soatda</small>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="card mb-3 border-2">
+            <img src="im/bicycle.webp" class="img-fluid rounded-start " alt="...">
+            <div class="card-body">
+                <h3 class="card-title d-flex justify-content-center">Velisoped</h3>
+                <p class="card-title d-flex justify-content-center Velisoped"><bold class="text-muted">N soatda</small>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="card mb-3 border-2">
+            <img src="im/car.avif" class="img-fluid rounded-start " alt="...">
+            <div class="card-body">
+                <h3 class="card-title d-flex justify-content-center">Mashina</h3>
+                <p class="card-title d-flex justify-content-center Mashina"><small class="text-muted">N soatda</small>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="card mb-3 border-2">
+            <img src="im/depositphotos_233092786-stock-illustration-plane-aircraft-icon-vector-filled.jpg"
+                class="img-fluid rounded-start " alt="...">
+            <div class="card-body">
+                <h3 class="card-title d-flex justify-content-center d-flex justify-content-center">Samalyot</h3>
+                <p class="card-title d-flex justify-content-center Samalyot"><small class="text-muted">N soatda</small>
+                </p>
+            </div>
+        </div>
+</body>
+
+<script>
+    document.querySelector(".btn").onclick = hisobla;
+    function hisobla() {
+        let inputValue = document.querySelector(".input").value;
+        
+        document.querySelector('.Piyoda').innerHTML = inputValue / 3.6
+        document.querySelector('.Velisoped').innerHTML = inputValue / 20.1
+        document.querySelector('.Mashina').innerHTML = inputValue / 70
+        document.querySelector('.Samalyot').innerHTML = inputValue / 800
+
+    }
+</script>
+
+</html>
